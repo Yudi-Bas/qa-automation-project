@@ -38,4 +38,3 @@ jobs:
         path: |
           app/build/reports/tests/test/
           app/build/test-results/test/
-          build/reports/tests/test/

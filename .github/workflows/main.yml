@@ -28,7 +28,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Run API & UI tests
-      run: ./gradlew clean test --stacktrace
+      run: ./gradlew clean :app:test --stacktrace
 
     - name: Upload test reports as artifact
       if: always()

@@ -20,11 +20,13 @@ public class UiTests {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         // FIX: Remove headless untuk debug lokal
-        // options.addArguments("--headless=new");
+        options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--window-size=1920,1080");
         options.addArguments("--disable-gpu");
+        options.addArguments("--disable-dev-tools");
+        options.addArguments("--disable-infobars");
         driver = new ChromeDriver(options);
         loginPage = new LoginPage(driver);
     }
